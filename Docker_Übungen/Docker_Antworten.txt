@@ -1,0 +1,42 @@
+1-	docker container ls 	docker container prune oder docker rm -f $(docker ps -aq) zweite löscht running und stopped 
+	docker image ls      	docker rmi $(docker images -q)  docker image prune
+	docker volume ls     	docker volume prune
+
+2-	docker image pull centos 
+
+3- 	docker container run ozgurozturknet/app1 sh
+
+4-	docker container run -d httpd:alpine --> docker container ls oder docker ps
+
+5-	docker logs <container_id> oder <container_name>
+
+6-	docker container stop fdb4 --> docker container start fdb4 --> docker container rm fdb4 
+
+7- 	docker container run -d -p 80:80 --name websunucu ozgurozturknet/adanzyedocker  --> 127.0.0.1
+
+8- 	docker container exec -it websunucu sh ile baglanip /usr/local/apache2/htdocs icinde index.htmlde güncellemeler yaptim
+
+9- 	docker container rm -f websunucu ode <container_id>
+
+10- 	docker container run alpine ls
+
+11- 	docker volume create alistirma1
+
+12-	docker container run -it --name birinci -v alistirma1:/test alpine
+	     
+	cd test/ --> touch abc.txt --> echo "deneme" >> abc.txt --> cat abc.txt --> deneme
+
+13-	docker container run  -it --name ikinci -v alistirma1:/test  alpine
+	cd test/ --> ls --> abc.txt --> cat abc.txt --> deneme
+
+14-	docker container run -it -v alistirma1:/test:ro --name ucuncu alpine
+	cd /test --> touch abc1.txt --> touch: abc1.txt --> Read-only file system
+
+15-	C:\Users\Privat\Desktop\bindmountdeneme 
+
+16- 	docker container run -d -p 80:80 -v C:\Users\Privat\Desktop\bindmountdeneme:/usr/local/apache2/htdocs --name websunucu1 ozgurozturknet/adanzyedocker
+
+17- 	docker rm -f $(docker ps -aq)
+
+
+

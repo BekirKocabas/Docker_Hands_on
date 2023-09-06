@@ -1,0 +1,34 @@
+1: Lassen Sie uns zunächst alle Container, Images und Volumes im System anzeigen. Dazu geben wir separate Auflistungsbefehle ein. Und dann säubern wir alle Container, Images und Volumes auf Ihrem Rechner. Hierfür gibt es zwei Methoden. Mal sehen, ob Sie sich für die einfache entscheiden. 
+
+2: Ziehen Sie die Images namens centos, alpine, nginx, httpd:alpine, ozgurozturknet/adanzyedocker, ozgurozturknet/hello-app, ozgurozturknet/app1 auf das System, auf dem wir arbeiten. 
+
+3: Erstellen Sie einen Container aus dem Image namens ozgurozturknet/app1.
+
+4: Erstellen Sie einen abgetrennten Container aus dem Image mit dem Namen httpd:alpine. Schauen wir uns den Namen und die ID des Containers an, den wir erstellt haben. 
+
+5: Schauen wir uns die Logs des Containers an, den wir erstellt haben.
+
+6: Stoppen wir den Container, starten wir ihn erneut und entfernen wir ihn schließlich aus dem System. 
+
+7: Erstellen wir einen abgetrennten Container namens websunucu aus dem Image namens ozgurozturknet/adanzyedocker und geben den Port mit "-p 80:80" an. Greifen wir mit dem Browser unseres eigenen Computers auf diese Website zu.
+
+8: Verbinden wir uns mit diesem Container namens Webserver, gehen wir in den Ordner /usr/local/apache2/htdocs und fügen wir den Text "trial" mit dem Befehl echo "trial" >> index.html in diese Datei ein. Wechseln Sie zum Webbrowser und aktualisieren Sie ihn, um zu sehen, dass wir der Datei etwas hinzufügen können. Verlassen Sie dann den Container mit exit.
+
+9: Löschen Sie den Container namens webserver, während er läuft.
+
+10: Erstellen wir einen Container aus dem Image namens alpine. Aber lassen wir die Anwendung "ls" anstelle der Anwendung laufen, die standardmäßig laufen sollte.
+
+11: Erstellen Sie ein Volume namens "alistirma1". 
+
+12: Erstellen Sie einen Container mit dem Namen "first" aus dem Abbild "alpine". Erstellen wir diesen Container im interaktiven Modus und verbinden uns mit ihm. Gleichzeitig mounten Sie den Datenträger "alistirma1" in den Ordner "/test" dieses Containers. Gehen wir in diesen Ordner und erstellen eine Datei mit dem Befehl "touch abc.txt" und fügen dann Text in diese Datei mit dem Befehl "echo trial >> abc.txt" ein. 
+
+13: Erstellen wir einen Container mit dem Namen "second" aus dem Bild mit dem Namen alpine. Erzeugen wir diesen Container im interaktiven Modus und verbinden uns mit ihm. Gleichzeitig mounten wir das Volume "alistirma1" in den Ordner "/test" dieses Containers. Wir listen die Dateien in diesem Ordner mit dem Befehl "ls" auf und stellen fest, dass es eine Datei "abc.txt" gibt. Prüfen wir den Inhalt der Datei mit "cat abc.txt". 
+
+14: Erstellen wir einen Container namens "ucuncu" aus dem Image namens alpine. Erzeugen wir diesen Container im interaktiven Modus und verbinden uns mit ihm. Gleichzeitig mounten wir den Datenträger "alistirma1" in den Ordner "/test" dieses Containers, aber als schreibgeschützt. Gehen wir in diesen Ordner und versuchen wir, eine Datei mit dem Befehl "touch abc1.txt" zu erstellen. Und wir werden sehen, dass wir sie nicht erstellen können.
+
+
+15: Erstellen wir einen Ordner auf unserem Computer "z.B. c:\try" und erstellen Sie eine Datei namens index.html in diesem Ordner und fügen Sie etwas Text in diese Datei ein.
+
+16: Erstellen wir einen abgetrennten Container namens websunucu1 aus dem Image namens ozgurozturknet/adanzyedocker und veröffentlichen den Port mit "-p 80:80". Mounten Sie den Ordner, den wir auf unserem Computer erstellt haben, in den Ordner /usr/local/apache2/htdocs innerhalb des Containers. Öffnen Sie einen Webbrowser und gehen Sie zu 127.0.0.0.1 und sehen Sie unsere Website. Bearbeiten Sie nun die Datei index.html in dem Ordner, den wir auf unserem Computer erstellt haben, und fügen Sie neue Artikel hinzu. Aktualisieren Sie die Webseite und sehen Sie sich die neuen Artikel an.
+
+17: Löschen Sie alle laufenden Container. 
